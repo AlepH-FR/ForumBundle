@@ -306,6 +306,16 @@ abstract class Topic
     }
 
     /**
+     * Removes the last post
+     *
+     * @return null
+     */
+	public function removeLastPost()
+	{
+		$this->lastPost = null;
+	}
+
+    /**
      * Sets the category
      *
      * @param Category $category

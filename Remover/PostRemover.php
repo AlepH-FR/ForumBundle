@@ -28,6 +28,10 @@ class PostRemover
             throw new LogicException('You shall not remove the first topic post. Remove the topic instead');
         }
 
+		// dumping foreign keys for SQL based databases
+		$topic->removeLastPost();
+		$topic->getCategory()->removeLastPost();
+		
         $this->objectManager->remove($post);
 
         // Must flush because the topic updater will fetch posts from DB

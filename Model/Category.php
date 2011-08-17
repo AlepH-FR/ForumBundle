@@ -226,6 +226,16 @@ abstract class Category
     }
 
     /**
+     * Removes the last post
+     *
+     * @return null
+     */
+	public function removeLastPost()
+	{
+		$this->lastPost = null;
+	}
+
+    /**
      * Sets the last post
      *
      * @param Post $post
